@@ -13,12 +13,13 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLStudentsScene.fxml"));
-        Scene scene = new Scene(loader.load());
-        stage.setTitle("Szevasz");
+        //FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLStudentsScene.fxml"));
+        FXMLLoader bprloader = new FXMLLoader(MainApp.class.getResource("/fxml/bpr_dealership.fxml"));
+        Scene scene = new Scene(bprloader.load());
+        stage.setTitle("BPR  - Dealership");
         stage.setScene(scene);
         
-        ((FXMLStudentsSceneController)loader.getController()).setModel(new Model());
+        //((FXMLStudentsSceneController)bprloader.getController()).setModel(new Model());
         
         stage.show();
     }
